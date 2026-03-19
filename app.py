@@ -65,9 +65,14 @@ if st.button("Generate Label"):
     buf = io.BytesIO()
     img.save(buf, format="PNG", dpi=(600, 600))
     
+ # Prepare the filename dynamically
+    # This will look like: 211720_1 of 1_Medium_code.png
+    clean_items = items.replace(" ", "") # Optional: removes spaces from '1 of 1' for cleaner filenames
+    dynamic_name = f"{order_id}_{clean_items}_{size_input}_code.png"
+
     st.download_button(
         label="Download Label",
         data=buf.getvalue(),
-        file_name=f"{order_id}_code.png",
+        file_name=dynamic_name,
         mime="image/png"
     )
