@@ -56,10 +56,10 @@ def create_label(order_num, item_count, material, design_name):
     return background
 
 # --- STREAMLIT USER INTERFACE ---
-st.set_page_config(page_title="Custom Label Creator", layout="centered")
+st.set_page_config(page_title="Trade Label Creator", layout="centered")
 
-st.title("🏷️ Custom Label Creator")
-st.write("Professional 1-inch labels at 600 DPI resolution.")
+st.title("🏷️ Trade Label Creator")
+st.write("Trade Program Label.")
 
 # Input fields for label data
 col1, col2 = st.columns(2)
